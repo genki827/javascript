@@ -59,16 +59,26 @@ sayWorld();
 
 //Q7 メソッド
 user.birthday = '2000-09-27';
-user.sayHello = function() {console.log("Hello!")};
+user.sayHello = function() {
+    console.log("Hello!")
+};
 
 user.sayHello();
 
 //Q8 引数
 let calc = {};
-calc.add = function add(x, y) {console.log(x + y);}
-calc.subtract = function subtract(x, y) {console.log(x - y);}
-calc.multiply = function multiply(x, y) {console.log(x * y);}
-calc.divide = function divide(x, y) {console.log(x / y);}
+calc.add = function add(x, y) {
+    console.log(x + y);
+}
+calc.subtract = function subtract(x, y) {
+    console.log(x - y);
+}
+calc.multiply = function multiply(x, y) {
+    console.log(x * y);
+}
+calc.divide = function divide(x, y) {
+    console.log(x / y);
+}
 
 calc.add(3,4);
 calc.subtract(15,5);
