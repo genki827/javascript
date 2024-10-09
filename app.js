@@ -8,7 +8,7 @@ console.log("私のニックネームは" + nickname + "です。年齢は" + ag
 //Q2 配列
 let languages = ['JavaScript', 'PHP', 'Ruby', 'Python', 'Go'];
 
-console.log("私の好きな言語は" + languages[0] + "です。次は" + languages[1] + "勉強してみたいです。");
+console.log(`私の好きな言語は${languages[0]}です。次は${languages[1]}勉強してみたいです。`);
 
 //Q3 オブジェクト
 let user = {
@@ -86,19 +86,19 @@ calc.multiply(7,7);
 calc.divide(25,5);
 
 //Q9 返り値
-function remainder (x,y){
-    return x%y;
+function remainder (x, y){
+    return x % y;
 }
 
-console.log("5を3で割った余りは" + remainder(5,3) + "です。");
+console.log(`5を3で割った余りは${remainder(5,3)}です。`);
 
 //Q10 スコープ
 // function foo() {
 //     let x = 1;
 //   }
 //   console.log(x);
-//xをメソッド内で定義しているため、メソッドの外だとスコープ範囲外のため上記のconsole.logの参照ができないためエラーが出ます。
-//問題を解決するにはメソッド外でxを定義する必要があります。
+//xを関数内で定義しているため、関数の外だとスコープ範囲外のため上記のconsole.logの参照ができないためエラーが出ます。
+//問題を解決するには関数外でxを定義する必要があります。
 
 //応用編
 //Q1 標準組み込みオブジェクト
@@ -136,9 +136,9 @@ function isNum(num){
 }
 
 for(let i = 0;i < mixed.length;i++){
-    if(isNum(mixed[i]) == true && isEven(mixed[i]) == true){
+    if(isNum(mixed[i]) && isEven(mixed[i])){
         console.log("even");
-    }else if(isNum(mixed[i]) == true && isEven(mixed[i]) == false){
+    }else if(isNum(mixed[i]) && !isEven(mixed[i])){
         console.log("odd");
     }else{
         console.log("not number");
