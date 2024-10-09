@@ -49,14 +49,13 @@ for(let i = 0; i<playerList.length; i++){
 console.log(sum/playerList.length);
 
 //Q6 関数
-function sayHello(callback){
+function sayHello(){
     console.log("Hello");
-    callback();
 }
 
-sayHello( function(){
-    console.log("World");
-})
+let sayWorld = function() {return console.log("World ")};
+sayHello();
+sayWorld();
 
 //Q7 メソッド
 user.birthday = '2000-09-27';
@@ -66,18 +65,10 @@ user.sayHello();
 
 //Q8 引数
 let calc = {};
-calc.add = function add(x,y){
-    console.log(x+y);
-}
-calc.subtract =  function subtract(x,y){
-    console.log(x-y);
-}
-calc.multiply = function multiply(x,y){
-    console.log(x*y);
-}
-calc.divide = function divide(x,y){
-    console.log(x/y);
-}
+calc.add = function add(x, y) {console.log(x + y);}
+calc.subtract = function subtract(x, y) {console.log(x - y);}
+calc.multiply = function multiply(x, y) {console.log(x * y);}
+calc.divide = function divide(x, y) {console.log(x / y);}
 
 calc.add(3,4);
 calc.subtract(15,5);
@@ -104,17 +95,15 @@ console.log("5を3で割った余りは" + remainder(5,3) + "です。");
 console.log(Math.floor(Math.random() * 10));
 
 //Q2 コールバック関数
-setTimeout(function (){console.log("Hello World!")},3000);
+setTimeout(function() {console.log("Hello World!")}, 3000);
 
 //Q3 if
 let num = 0;
 if(num > 0){
     console.log("num is greater than 0");
-}
-else if(num < 0){
+}else if(num < 0){
     console.log("num is less than 0");
-}
-else{
+}else{
     console.log("num is 0");
 }
 
@@ -128,14 +117,20 @@ console.log(numbers);
 //Q5 for × if
 let mixed = [4, '2', 5, '8', '9', 0, 1];
 
+function isEven(num){
+    return num % 2 === 0;
+}
+
+function isNum(num){
+    return typeof num === 'number';
+}
+
 for(let i = 0;i < mixed.length;i++){
-    if(typeof mixed[i] === 'number' && mixed[i] % 2 === 0){
+    if(isNum(mixed[i]) == true && isEven(mixed[i]) == true){
         console.log("even");
-    }
-    else if(typeof mixed[i] === 'number' && mixed[i] % 2 === 1){
+    }else if(isNum(mixed[i]) == true && isEven(mixed[i]) == false){
         console.log("odd");
-    }
-    else{
+    }else{
         console.log("not number");
     }
 }
